@@ -1,3 +1,8 @@
+# the project is no longer maintained 
+
+I think there is a issues since two users have sent me an email. **anyone is free to use the code**
+
+---
 
 # <a href='https://postimg.org/image/c6s5woozz/' target='_blank'><img src='https://s19.postimg.org/c6s5woozz/logo.png' border='0' alt='postimage'/></a> Ionic sidemenu multilevel
 ### Introduction:
