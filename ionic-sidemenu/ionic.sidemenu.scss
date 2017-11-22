@@ -1,0 +1,358 @@
+/*ionic-sidemenu*/
+@mixin linear-gradient($angle,$color1,$angle1,$color2,$angle2) {
+background: -webkit-gradient(linear, $angle, color-stop($angle1, $color1), color-stop($angle2, $color2));/* Chrome,Safari4+ */
+background: -webkit-linear-gradient($angle, $color1 $angle1, $color2 $angle2);/* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient($angle, $color1 $angle1, $color2 $angle2);/* Opera 11.10+ */
+background: -ms-linear-gradient($angle, $color1 $angle1, $color2 $angle2);/* IE10+ */
+}
+.ionic-sidemenu{
+	height:100% !important;
+	overflow-y:auto;
+	.sidemenu-header{
+		img{
+			width: 100%;
+			height: 155px;
+			max-height: 155px;
+		}
+		height: 155px;
+		max-height: 155px;
+	}
+	.item-complex .item-content, .item-radio .item-content{
+		background: transparent !important;
+	}
+	.item{
+		background: transparent !important;
+		span{
+			font-weight: 600;
+			color:white;
+			font-size: 14px;
+			margin-left:6px;
+		}
+	}
+}
+.ionic-sidemenu-blue {
+	$color-angle:301deg;
+	$color-first:#7ABCFE;
+	$color-first-angle:30%;
+	$color-second:#3E62F6;
+	$color-second-angle:90%;
+	$color-hover:#ADD8E6;
+	$color-hover-transparent:0.2;
+	@extend .ionic-sidemenu;
+	@include linear-gradient($color-angle,$color-first,
+		$color-first-angle,$color-second,$color-second-angle);
+	.item{
+		.icon{
+			color:white;
+			padding:5px;
+			border-radius:100%;
+		}
+		.micon-right{
+			margin-left:10px;
+			color:rgba(white,1);
+			border:none;
+			position: absolute;
+			left: 200px;
+			top: 11px;
+			&:before{
+				font-size: 16px;
+			}
+		}
+		.micon-left{
+			&:before{
+				text-shadow: 0 1px 1px #000000;
+				font-size: 20px;
+			}
+		}
+	}
+	@for $i from 0 through 4 {
+		.sidemenu-subitem-#{$i}{
+			margin-left: 10px * $i;
+			border:none;
+		}
+		.micon-right-#{$i}{
+			margin-left:15px;
+			color:rgba(black,0.7);
+			border:none;
+			position: absolute;
+			right: 15%;
+			top: 11px;
+		}
+		.sidemenu-div-item-#{$i}{
+			&:hover{
+				background:rgba($color-hover,$color-hover-transparent);
+				width:100%;
+			}
+			background:rgba(black,0.1);
+			border-bottom:1px solid rgba(black,0.1);
+		}
+				.sidemenu-div-item-1{
+			background:rgba(black,0.1);
+		}
+		.sidemenu-div-item-2{
+			background:rgba(black,0.2);
+		}
+	}
+}
+.ionic-sidemenu-red {
+	$color-angle:301deg;
+	$color-first:#FE3535;
+	$color-first-angle:30%;
+	$color-second:#F68834;
+	$color-second-angle:79%;
+	$color-hover:#F68834;
+	$color-hover-transparent:0.2;
+	@extend .ionic-sidemenu;
+	@include linear-gradient($color-angle,$color-first,
+		$color-first-angle,$color-second,$color-second-angle);
+	.item{
+		.icon{
+			color:#eeeeee;
+			padding:5px;
+			border-radius:100%;
+		}
+		.micon-right{
+			margin-left:10px;
+			color:rgba(white,1);
+			border:none;
+			position: absolute;
+			left: 200px;
+			top: 11px;
+			&:before{
+				font-size: 16px;
+			}
+		}
+		.micon-left{
+			&:before{
+				font-size: 20px;
+				text-shadow: 0 1px 1px #000000;
+			}
+		}
+	}
+	@for $i from 0 through 4 {
+		.sidemenu-subitem-#{$i}{
+			margin-left: 15px * $i;
+			border:none;
+		}
+		.micon-right-#{$i}{
+			margin-left:10px;
+			color:rgba(black,0.7);
+			border:none;
+			position: absolute;
+			right: 15%;
+			top: 11px;
+		}
+		.sidemenu-div-item-#{$i}{
+			&:hover{
+				background:rgba($color-hover,$color-hover-transparent);
+				width:100%;
+			}
+			background:rgba(black,0.2);
+			border-bottom:1px solid rgba(white,0.1);
+		}
+		.sidemenu-div-item-1{
+			background:rgba(black,0.1);
+		}
+		.sidemenu-div-item-2{
+			background:rgba(black,0.2);
+		}
+	}
+}
+.ionic-sidemenu-green {
+	$color-angle:84deg;
+	$color-first:#38CC1B;
+	$color-first-angle:22%;
+	$color-second:#98F61E;
+	$color-second-angle:89%;
+	$color-hover:#217810;
+	$color-hover-transparent:0.6;
+	@extend .ionic-sidemenu;
+	@include linear-gradient($color-angle,$color-first,
+		$color-first-angle,$color-second,$color-second-angle);
+	.item{
+		.icon{
+			color:white;
+			padding:5px;
+			border-radius:100%;
+		}
+		.micon-right{
+			margin-left:10px;
+			color:rgba(white,1);
+			border:none;
+			position: absolute;
+			left: 200px;
+			top: 11px;
+			&:before{
+				font-size: 16px;
+			}
+		}
+		.micon-left{
+			&:before{
+				text-shadow: 0 1px 1px #000000;
+				font-size: 20px;
+			}
+		}
+		span{
+			text-shadow: 0 1px 1px #000000;
+		}
+	}
+	@for $i from 0 through 4 {
+		.sidemenu-subitem-#{$i}{
+			margin-left: 15px * $i;
+			border:none;
+		}
+		.micon-right-#{$i}{
+			margin-left:10px;
+			color:rgba(black,0.7);
+			border:none;
+			position: absolute;
+			right: 15%;
+			top: 11px;
+		}
+		.sidemenu-div-item-#{$i}{
+			&:hover{
+				background:rgba($color-hover,$color-hover-transparent);
+				width:100%;
+			}
+			background:rgba(black,0.1);
+			border-bottom:1px solid rgba(black,0.1);
+		}
+		.sidemenu-div-item-1{
+			background:rgba(black,0.2);
+		}
+		.sidemenu-div-item-2{
+			background:rgba(black,0.3);
+		}
+	}
+}
+.ionic-sidemenu-stable {
+	$color-angle:154deg;
+	$color-first:#F8F8F8;
+	$color-first-angle:10%;
+	$color-second:#D4D4D4;
+	$color-second-angle:80%;
+	$color-hover:#FFF;
+	$color-hover-transparent:0.2;
+	@extend .ionic-sidemenu;
+	@include linear-gradient($color-angle,$color-first,
+		$color-first-angle,$color-second,$color-second-angle);
+	.item{
+		.icon{
+			color:white;
+			padding:5px;
+			border-radius:100%;
+		}
+		.micon-right{
+			margin-left:10px;
+			color:rgba(white,1);
+			border:none;
+			position: absolute;
+			left: 200px;
+			top: 11px;
+			&:before{
+				font-size: 16px;
+			}
+		}
+		.micon-left{
+			&:before{
+				text-shadow: 0 1px 1px #000000;
+				font-size: 20px;
+			}
+		}
+		span {
+			color:black;
+		}
+	}
+	@for $i from 0 through 4 {
+		.sidemenu-subitem-#{$i}{
+			margin-left: 10px * $i;
+			border:none;
+		}
+		.micon-right-#{$i}{
+			margin-left:15px;
+			color:rgba(black,0.7);
+			border:none;
+			position: absolute;
+			right: 15%;
+			top: 11px;
+		}
+		.sidemenu-div-item-#{$i}{
+			&:hover{
+				background:rgba($color-hover,$color-hover-transparent);
+				width:100%;
+			}
+			background:rgba(black,0.1);
+			border-bottom:1px solid rgba(black,0.1);
+		}
+		.sidemenu-div-item-1{
+			background:rgba(black,0.1);
+		}
+		.sidemenu-div-item-2{
+			background:rgba(black,0.2);
+		}
+	}
+}
+.ionic-sidemenu-dark {
+	$color-angle:154deg;
+	$color-first:#2E2E2E;
+	$color-first-angle:16%;
+	$color-second:#545454;
+	$color-second-angle:95%;
+	$color-hover:#FFF;
+	$color-hover-transparent:0.2;
+	@extend .ionic-sidemenu;
+	@include linear-gradient($color-angle,$color-first,
+		$color-first-angle,$color-second,$color-second-angle);
+	.item{
+		.icon{
+			color:white;
+			padding:5px;
+			border-radius:100%;
+		}
+		.micon-right{
+			margin-left:10px;
+			color:rgba(white,1);
+			border:none;
+			position: absolute;
+			left: 200px;
+			top: 11px;
+			&:before{
+				font-size: 16px;
+			}
+		}
+		.micon-left{
+			&:before{
+				text-shadow: 0 1px 1px #000000;
+				font-size: 20px;
+			}
+		}
+	}
+	@for $i from 0 through 4 {
+		.sidemenu-subitem-#{$i}{
+			margin-left: 10px * $i;
+			border:none;
+		}
+		.micon-right-#{$i}{
+			margin-left:15px;
+			color:rgba(black,0.7);
+			border:none;
+			position: absolute;
+			right: 15%;
+			top: 11px;
+		}
+		.sidemenu-div-item-#{$i}{
+			&:hover{
+				background:rgba($color-hover,$color-hover-transparent);
+				width:100%;
+			}
+			background:rgba(black,0.1);
+			border-bottom:1px solid rgba(black,0.1);
+		}
+		.sidemenu-div-item-1{
+			background:rgba(black,0.1);
+		}
+		.sidemenu-div-item-2{
+			background:rgba(black,0.2);
+		}
+	}
+}
